@@ -2,19 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Alianza Valderrama - Servicios contables y financieros integrales para tu empresa.">
     <title>Alianza Valderrama | Firma Contable & Consultoría</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=17">
     <link rel="stylesheet" href="assets/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="logo-transparent.png" alt="Alianzas Valderrama" class="nav-logo-img" width="400" height="110">
-            </a>
+            <div class="nav-brand-group">
+                <a href="#" class="logo" aria-label="Alianzas Valderrama — inicio">
+                    <img src="logo0.svg" alt="" class="nav-logo-img" width="440" height="414" decoding="async">
+                    <span class="nav-brand-text">
+                        <span class="nav-brand-title">Alianzas<br>Valderrama</span>
+                        <span class="nav-brand-tagline">
+                            <span class="nav-brand-tagline-inner">Aliados estratégicos integrales</span>
+                        </span>
+                    </span>
+                </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#nosotros">La Firma</a></li>
@@ -27,9 +35,14 @@
             </div>
         </div>
     </nav>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
     <!-- Hero Section -->
     <header id="inicio" class="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-bg-layer hero-bg-layer--a"></div>
+            <div class="hero-bg-layer hero-bg-layer--b"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content scroll-animate">
                 <div class="hero-badge">Consultoría Financiera & Contable</div>
@@ -200,37 +213,10 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Correo Institucional</h4>
-                            <p>direccion@alianzavalderrama.com</p>
+                            <p><a href="mailto:info.alivacp@gmail.com">info.alivacp@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="contact-form-wrapper scroll-animate delay-2">
-                <form id="form-contacto" class="premium-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre y Cargo</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez - Director General">
-                    </div>
-                    <div class="form-group">
-                        <label for="empresa">Empresa</label>
-                        <input type="text" id="empresa" name="empresa" required placeholder="Razón Social">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group half">
-                            <label for="email">Correo Corporativo</label>
-                            <input type="email" id="email" name="email" required placeholder="correo@suempresa.com">
-                        </div>
-                        <div class="form-group half">
-                            <label for="telefono">Teléfono de Contacto</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Requerimiento Específico</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describa brevemente cómo podemos asistirle..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary btn-block">Enviar Solicitud Confidencial</button>
-                </form>
             </div>
         </div>
     </section>
@@ -273,6 +259,17 @@
             </div>
         </div>
     </footer>
+
+    <a
+        href="https://wa.me/15559876543"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escribir por WhatsApp"
+        title="WhatsApp"
+    >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="script.js"></script>
 
