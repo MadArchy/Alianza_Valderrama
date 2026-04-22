@@ -1,0 +1,11 @@
+{
+  "name": "alianzas-valderrama-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sitio estático — Alianzas Valderrama",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve . -p 8080",
+    "test": "node tools/check-site.mjs"
+  }
+}

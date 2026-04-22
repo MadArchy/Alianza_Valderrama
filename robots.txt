@@ -1,0 +1,5 @@
+# Reemplazar el dominio del Sitemap al publicar (https://su-dominio.com/sitemap.xml)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tudominio.com/sitemap.xml
