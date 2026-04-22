@@ -1,4 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero background sequence: video -> image 1 -> image 2
+    const heroBg = document.querySelector('.hero-bg');
+    const heroBgVideo = document.querySelector('.hero-bg-video');
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (heroBg) {
+        const firstImageDurationMs = 2000;
+        const videoFallbackMs = 20000;
+
+        const activateHeroStage = (stageClass) => {
+            heroBg.classList.remove('is-video', 'is-image-1', 'is-image-2');
+            heroBg.classList.add(stageClass);
+        };
+
+        if (reduceMotion || !heroBgVideo) {
+            activateHeroStage('is-image-2');
+        } else {
+            const showFirstImage = () => {
+                activateHeroStage('is-image-1');
+                window.setTimeout(() => {
+                    activateHeroStage('is-image-2');
+                }, firstImageDurationMs);
+            };
+
+            activateHeroStage('is-video');
+
+            const endVideoSequence = () => {
+                showFirstImage();
+            };
+
+            heroBgVideo.currentTime = 0;
+            heroBgVideo.volume = 0;
+            heroBgVideo.muted = true;
+            heroBgVideo.addEventListener('ended', endVideoSequence, { once: true });
+            heroBgVideo.addEventListener('error', endVideoSequence, { once: true });
+
+            const playPromise = heroBgVideo.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {
+                    endVideoSequence();
+                });
+            }
+
+            // Fallback in case ended event doesn't trigger in some browsers.
+            window.setTimeout(() => {
+                if (heroBg.classList.contains('is-video')) {
+                    endVideoSequence();
+                }
+            }, videoFallbackMs);
+        }
+    }
+
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
