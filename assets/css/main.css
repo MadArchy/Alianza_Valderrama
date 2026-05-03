@@ -1650,6 +1650,8 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(255,255,255,0.04);
@@ -1686,18 +1688,17 @@ p {
 
 /* ── Banner imagen por tarjeta ───────────────────────────── */
 .obj-card__img {
-    position: relative;
-    height: 180px;
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     overflow: hidden;
-    flex-shrink: 0;
     transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
 }
 .obj-card:hover .obj-card__img {
-    transform: scale(1.03);
-    border-radius: 20px 20px 0 0;
+    transform: scale(1.04);
+    border-radius: 20px;
 }
 
 /* Overlay degradado sobre la imagen */
@@ -1706,18 +1707,20 @@ p {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(6,15,34,0.25) 0%,
-        rgba(6,15,34,0.55) 60%,
-        rgba(6,15,34,0.88) 100%
+        rgba(6,15,34,0.75) 0%,
+        rgba(6,15,34,0.10) 35%,
+        rgba(6,15,34,0.10) 60%,
+        rgba(6,15,34,0.85) 100%
     );
     transition: background 0.35s ease;
 }
 .obj-card:hover .obj-card__img-overlay {
     background: linear-gradient(
         to bottom,
-        rgba(6,15,34,0.15) 0%,
-        rgba(6,15,34,0.45) 60%,
-        rgba(6,15,34,0.85) 100%
+        rgba(6,15,34,0.65) 0%,
+        rgba(6,15,34,0.05) 35%,
+        rgba(6,15,34,0.05) 60%,
+        rgba(6,15,34,0.80) 100%
     );
 }
 
@@ -1759,10 +1762,11 @@ p {
     border-color: rgba(42,157,143,0.45);
 }
 
-/* Cuerpo de texto */
+/* Cuerpo de texto — solo el título va aquí (parte superior) */
 .obj-card__body {
-    flex: 1;
-    padding: 1.25rem 1.5rem 0.75rem;
+    padding: 1.5rem 1.5rem 0;
+    position: relative;
+    z-index: 2;
 }
 
 .obj-card__tag {
@@ -1797,10 +1801,14 @@ p {
     font-weight: 400;
 }
 
-/* Footer / KPI */
+/* Footer / KPI — descripción + badge en la parte inferior */
 .obj-card__footer {
-    padding: 1rem 1.75rem 1.75rem;
-    margin-top: auto;
+    padding: 0 1.5rem 1.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .obj-card__kpi {
