@@ -1,96 +1,103 @@
 /**
  * Contenido rico de cada modal de servicio (6 ítems, orden fijo en el DOM).
- * Misma estructura: caja de mensaje estratégico + sección con lista.
+ * Textos corporativos reales — Alianzas Valderrama S.A.S.
  */
 const SERVICE_MODAL_RICH_HTML = [
     // 0 — Contabilidad Integral
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Gobierno contable y reporting financiero con trazabilidad, cumplimiento normativo y criterios de control para la alta dirección.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Transformamos sus operaciones diarias en información financiera estructurada bajo estándares técnicos, garantizando un control total de sus recursos y una base sólida para la toma de decisiones gerenciales.</p>
     <p class="modal-svc-lead-p">Una contabilidad disciplinada es el mapa de su negocio: habilita cierres confiables, decisiones oportunas y una posición defendible frente a socios, bancos y entes de control.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Incluye</p>
     <ul class="modal-svc-includes-list">
-        <li>Registro y clasificación de operaciones</li>
-        <li>Elaboración de estados financieros</li>
-        <li>Conciliaciones bancarias</li>
-        <li>Cierre contable mensual y anual</li>
+        <li>Registro y clasificación de operaciones bajo NIIF y estándares locales</li>
+        <li>Elaboración de estados financieros con notas revelatorias</li>
+        <li>Conciliaciones bancarias y depuración de cuentas</li>
+        <li>Cierre contable mensual, trimestral y anual</li>
+        <li>Control de activos fijos y depreciaciones</li>
     </ul>
 </div>`.trim(),
     // 1 — Gestión Tributaria
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Planificación tributaria y cumplimiento oportuno frente a la DIAN, con enfoque preventivo y mitigación de riesgos.</p>
-    <p class="modal-svc-lead-p">Documentar, liquidar y presentar en plazo reduce exposición a sanciones, optimiza la carga legal y libera a la dirección de improvisaciones fiscales.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Maximizamos la eficiencia fiscal de su organización mediante una planeación estratégica que asegura el cumplimiento oportuno de las obligaciones, mitigando riesgos y optimizando el flujo de caja.</p>
+    <p class="modal-svc-lead-p">Documentar, liquidar y presentar en plazo reduce exposición a sanciones, optimiza la carga legal y libera a la dirección de improvisaciones fiscales de alto costo.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Incluye</p>
     <ul class="modal-svc-includes-list">
-        <li>Declaraciones de impuestos (IVA, renta, ICA, retenciones)</li>
-        <li>Planeación tributaria (optimización fiscal legal)</li>
-        <li>Calendario tributario personalizado</li>
-        <li>Actualización normativa</li>
+        <li>Declaraciones de impuestos (IVA, Renta, ICA, Retenciones)</li>
+        <li>Planeación tributaria y optimización fiscal legal</li>
+        <li>Calendario tributario personalizado y alertas de vencimientos</li>
+        <li>Información exógena y medios magnéticos</li>
+        <li>Actualización normativa permanente</li>
     </ul>
 </div>`.trim(),
     // 2 — Consultoría Estratégica Financiera
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Alineación de la información financiera con la estrategia de crecimiento, rentabilidad y capital de trabajo.</p>
-    <p class="modal-svc-lead-p">KPIs, proyecciones y escenarios vinculados a su visión conectan números con decisiones: fortalecen confianza con bancos, socios e inversionistas.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Analizamos la estructura de capital y rentabilidad de su negocio para diseñar hojas de ruta que impulsen el crecimiento sostenible, la inversión inteligente y la estabilidad a largo plazo.</p>
+    <p class="modal-svc-lead-p">KPIs, proyecciones y escenarios vinculados a su visión conectan números con decisiones estratégicas: fortalecen la confianza con bancos, socios e inversionistas.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Incluye</p>
     <ul class="modal-svc-includes-list">
-        <li>Análisis financiero</li>
-        <li>Proyecciones y presupuestos</li>
-        <li>Indicadores de gestión (KPIs)</li>
-        <li>Toma de decisiones empresariales</li>
+        <li>Análisis financiero integral y diagnóstico de rentabilidad</li>
+        <li>Proyecciones financieras y modelos de presupuesto</li>
+        <li>Indicadores de gestión (KPIs) alineados a su estrategia</li>
+        <li>Estructuración para acceso a crédito e inversión</li>
+        <li>Acompañamiento en toma de decisiones de alto impacto</li>
     </ul>
 </div>`.trim(),
-    // 3 — Presentación de informes a entidades de control
+    // 3 — Presentación de Informes a Entidades de Control
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Estructuración de evidencia financiera y regulatoria ante entidades de vigilancia y control.</p>
-    <p class="modal-svc-lead-p">La puntualidad y el formato adecuado de informes requeridos preserva buena fe, licencias e imagen corporativa en mercados y sectores regulados.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Aseguramos la transparencia institucional gestionando con precisión el reporte de información exógena, Supersociedades y demás entes reguladores para evitar sanciones y contingencias legales.</p>
+    <p class="modal-svc-lead-p">La puntualidad y el formato adecuado de los informes requeridos preserva su buena fe institucional, licencias e imagen corporativa en mercados y sectores regulados.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Incluye</p>
     <ul class="modal-svc-includes-list">
-        <li>Elaboración de informes financieros requeridos</li>
-        <li>Reportes regulatorios</li>
-        <li>Validación de cumplimiento normativo</li>
+        <li>Informes financieros ante Supersociedades y Cámara de Comercio</li>
+        <li>Reportes SAGRILAFT y PTEE (prevención lavado de activos)</li>
+        <li>Información exógena y reportes a la DIAN</li>
+        <li>Validación de cumplimiento normativo y regulatorio</li>
+        <li>Preparación de evidencia ante auditorías externas</li>
     </ul>
 </div>`.trim(),
-    // 4 — Requerimientos y procesos ante la DIAN
+    // 4 — Atención de Requerimientos y Procesos ante la DIAN
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Un requerimiento, una fiscalización o un proceso mal atendido puede detener operaciones, congelar recursos y comprometer la reputación y la continuidad de su compañía.</p>
-    <p class="modal-svc-lead-p">La relación con la DIAN no es un trámite colateral: es un frente crítico donde se defienden activos, flujo de caja y el crédito fiscal. Una respuesta oportuna, técnicamente sólida y alineada con su estrategia reduce exposición, evita sanciones y protege a los socios y a la gobernanza de decisiones forzadas.</p>
-    <p class="modal-svc-lead-p">Nuestro acompañamiento pone a su organización en posición de control, con criterio jurídico-contable y trazabilidad de la información, para que lo vital —continuidad, liquidez y buena fe— no quede a merced de la improvisación.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Representamos técnicamente a su empresa en procesos de fiscalización y respuesta a requerimientos, defendiendo sus intereses con argumentos jurídicos y contables sólidos ante la autoridad tributaria.</p>
+    <p class="modal-svc-lead-p">La relación con la DIAN no es un trámite colateral: es un frente crítico donde se defienden activos, flujo de caja y crédito fiscal. Una respuesta oportuna y técnicamente sólida reduce la exposición, evita sanciones y protege la continuidad del negocio.</p>
+    <p class="modal-svc-lead-p">Nuestro acompañamiento pone a su organización en posición de control, con criterio jurídico-contable y trazabilidad de la información, para que lo vital —liquidez, continuidad y buena fe— no quede a merced de la improvisación.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Incluye</p>
     <ul class="modal-svc-includes-list">
         <li>Respuesta fundamentada a oficios, requerimientos y exigencias de documentación</li>
-        <li>Gestión de procesos de visita, fiscalización y actas</li>
+        <li>Gestión de procesos de visita, fiscalización y actas de inspección</li>
         <li>Devoluciones, compensaciones y recuperación de saldos a favor</li>
-        <li>Estrategia y presencia en auditorías y etapas de defensa o recurso</li>
+        <li>Estrategia y representación en auditorías y etapas de recurso</li>
     </ul>
 </div>`.trim(),
     // 5 — Consultoría Especializada
     `
 <div class="modal-svc-leadbox" role="region" aria-label="Mensaje estratégico">
-    <p class="modal-svc-lead-p modal-svc-lead-p--open">Diagnóstico y soluciones a medida en procesos contables, financieros y de constitución o reestructuración empresarial.</p>
-    <p class="modal-svc-lead-p">Cada brecha o proyecto crítico merece un enfoque diseñado para su etapa de madurez, con ejecución técnica y gobierno de la información alineado a su junta o propietarios.</p>
+    <p class="modal-svc-lead-p modal-svc-lead-p--open">Brindamos soluciones a medida para retos complejos como fusiones, valoraciones de empresas o auditorías específicas, aportando visión experta donde los procesos estándar no son suficientes.</p>
+    <p class="modal-svc-lead-p">Cada brecha o proyecto crítico merece un enfoque diseñado para su etapa de madurez, con ejecución técnica y gobierno de la información alineado a su junta directiva o propietarios.</p>
 </div>
 <div class="modal-svc-includes">
     <p class="modal-svc-includes-title">Puede incluir</p>
     <ul class="modal-svc-includes-list">
-        <li>Implementación de sistemas contables</li>
-        <li>Reestructuración financiera</li>
-        <li>Diagnóstico empresarial</li>
-        <li>Asesoría para creación de empresas</li>
+        <li>Valoración de empresas y due diligence financiero</li>
+        <li>Asesoría en fusiones, escisiones y reorganizaciones societarias</li>
+        <li>Implementación y migración de sistemas contables</li>
+        <li>Reestructuración financiera y saneamiento contable</li>
+        <li>Diagnóstico empresarial integral y plan de acción</li>
+        <li>Asesoría para creación y formalización de empresas</li>
     </ul>
 </div>`.trim(),
 ];
@@ -434,3 +441,41 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScrollAnimation();
     }
 });
+
+/* =========================================
+   Objetivos — Contadores animados + SVG draw
+   ========================================= */
+(function initObjCards() {
+    const cards = document.querySelectorAll('.obj-card');
+    if (!cards.length) return;
+
+    function animateCounter(el) {
+        const target   = parseInt(el.dataset.target, 10);
+        const suffix   = el.dataset.suffix || '';
+        const duration = 1400;
+        const step     = 16;
+        const steps    = Math.ceil(duration / step);
+        let frame      = 0;
+        const timer = setInterval(() => {
+            frame++;
+            const current = Math.round(target * (frame / steps));
+            el.textContent = current + suffix;
+            if (frame >= steps) {
+                el.textContent = target + suffix;
+                clearInterval(timer);
+            }
+        }, step);
+    }
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const card = entry.target;
+            card.classList.add('show');
+            card.querySelectorAll('.obj-counter').forEach(c => animateCounter(c));
+            obs.unobserve(card);
+        });
+    }, { threshold: 0.25 });
+
+    cards.forEach(card => obs.observe(card));
+})();

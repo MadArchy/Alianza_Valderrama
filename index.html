@@ -89,7 +89,7 @@
                 autoplay
                 playsinline
                 preload="metadata"
-                poster="assets/img/portada01.png"
+                poster="assets/img/portada01.webp"
             ></video>
             <div class="hero-bg-layer hero-bg-layer--a"></div>
             <div class="hero-bg-layer hero-bg-layer--b"></div>
@@ -232,10 +232,10 @@
         <div class="container about-container">
             <div class="about-text scroll-animate delay-1">
                 <span class="section-subtitle">Sobre La Firma</span>
-                <h2>Trayectoria y Compromiso con su Éxito</h2>
+                <h2>ADN Corporativo: Más de 15 Años de Confianza</h2>
                 <div class="heading-line"></div>
-                <p>En <strong>Alianza Valderrama</strong>, operamos bajo los más estrictos estándares de ética y profesionalismo. Somos una firma contable boutique diseñada para ofrecer atención personalizada a la alta dirección.</p>
-                <p>Nuestro equipo multidisciplinario transforma los datos financieros en estrategias de alto impacto, asegurando una optimización fiscal rigurosa y el cumplimiento normativo total.</p>
+                <p>Nuestra identidad se ha consolidado a lo largo de más de <strong>15 años de trayectoria</strong>, fundamentada en una estructura de consultoría estratégica que prioriza la precisión y la visión de negocio. El mayor testimonio de nuestra solidez es la lealtad de nuestros aliados: contamos con clientes que han permanecido con nosotros durante <strong>14 años ininterrumpidos</strong>, renovando su confianza cada ejercicio gracias a un servicio personalizado y de alto valor.</p>
+                <p>Entendemos que la información es el activo más valioso de una organización; por ello, operamos bajo los más estrictos estándares de confidencialidad e integridad. Este compromiso se apoya en una sólida ética profesional y en la adopción de <strong>innovación tecnológica</strong>, herramientas que nos permiten optimizar procesos y ofrecer soluciones de vanguardia en un entorno financiero siempre cambiante, garantizando seguridad y eficiencia en cada decisión.</p>
                 <div class="stats">
                     <div class="stat-item">
                         <span class="stat-number">15+</span>
@@ -252,7 +252,10 @@
                 </div>
             </div>
             <div class="about-image-wrapper scroll-animate delay-2">
-                <img src="assets/img/about-meeting.jpg" alt="Reunión de consultoría financiera profesional" class="about-img">
+                <picture>
+                    <source srcset="assets/img/about-meeting.webp" type="image/webp">
+                    <img src="assets/img/about-meeting.jpg" alt="Reunión de consultoría financiera profesional" class="about-img" width="600" height="400" loading="lazy">
+                </picture>
                 <div class="experience-badge">
                     <i class="fas fa-award"></i>
                     <span>Excelencia Comprobada</span>
@@ -347,19 +350,24 @@
             </div>
             <div class="benefits-container">
                 <div class="benefit-item scroll-animate delay-1">
-                    <div class="benefit-icon"><i class="fas fa-gem"></i></div>
-                    <h4>Calidad Premium</h4>
-                    <p>Entregables precisos, con diseño impecable y atención al mínimo detalle financiero.</p>
+                    <div class="benefit-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>Integridad</h4>
+                    <p>Rectitud y honestidad total en el manejo de los datos financieros de su organización. Sin compromisos, sin atajos.</p>
                 </div>
                 <div class="benefit-item scroll-animate delay-2">
-                    <div class="benefit-icon"><i class="fas fa-user-shield"></i></div>
-                    <h4>Confidencialidad Absoluta</h4>
-                    <p>Manejamos su información bajo rigurosos protocolos de seguridad y secreto profesional.</p>
+                    <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Lealtad</h4>
+                    <p>Protección constante de los intereses de nuestros aliados comerciales, con un acompañamiento que trasciende el contrato.</p>
                 </div>
                 <div class="benefit-item scroll-animate delay-3">
-                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-                    <h4>Oportunidad</h4>
-                    <p>Información financiera entregada en el momento exacto para aprovechar oportunidades del mercado.</p>
+                    <div class="benefit-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h4>Rigor Técnico</h4>
+                    <p>Precisión absoluta y actualización normativa permanente. Trabajamos con los más altos estándares contables y tributarios.</p>
+                </div>
+                <div class="benefit-item scroll-animate delay-4">
+                    <div class="benefit-icon"><i class="fas fa-user-shield"></i></div>
+                    <h4>Confidencialidad</h4>
+                    <p>Protocolos de máxima seguridad para la información sensible de su empresa. Su privacidad es nuestra prioridad.</p>
                 </div>
             </div>
         </div>
@@ -401,7 +409,122 @@
         </div>
     </section>
 
+    <!-- Objetivos del Proyecto -->
+    <section id="objetivos" class="objetivos">
+
+        <!-- Partículas decorativas -->
+        <div class="obj-particles" aria-hidden="true">
+            <span class="obj-p obj-p--1"></span>
+            <span class="obj-p obj-p--2"></span>
+            <span class="obj-p obj-p--3"></span>
+            <span class="obj-p obj-p--4"></span>
+        </div>
+
+        <div class="container">
+            <div class="objetivos-header scroll-animate">
+                <span class="objetivos-eyebrow">
+                    <span class="obj-eyebrow-line"></span>
+                    Nuestra Hoja de Ruta
+                    <span class="obj-eyebrow-line"></span>
+                </span>
+                <h2 class="objetivos-title">Objetivos del <span>Proyecto</span></h2>
+                <p class="objetivos-subtitle">Metas concretas que guían nuestra evolución como firma de referencia nacional</p>
+            </div>
+
+            <!-- 4 tarjetas horizontales uniformes -->
+            <div class="objetivos-grid-v2">
+
+                <!-- Card 1 — Objetivo General -->
+                <article class="obj-card obj-card--0 scroll-animate" aria-label="Objetivo General">
+                    <div class="obj-card__glow" aria-hidden="true"></div>
+                    <!-- Banner imagen -->
+                    <div class="obj-card__img" style="background-image:url('assets/img/consulting.webp')" role="img" aria-label="Consultoría corporativa">
+                        <div class="obj-card__img-overlay"></div>
+                        <span class="obj-card__num" aria-hidden="true">01</span>
+                        <span class="obj-card__img-tag">Objetivo General</span>
+                    </div>
+                    <!-- Contenido -->
+                    <div class="obj-card__body">
+                        <h3 class="obj-card__title">Firma de Consultoría de Élite</h3>
+                        <p class="obj-card__desc">Establecer una firma de consultoría de élite que mitigue el riesgo sancionatorio y optimice la carga fiscal, posicionándonos como referente nacional en asesoría de alto valor.</p>
+                    </div>
+                    <div class="obj-card__footer">
+                        <span class="obj-card__kpi">
+                            <i class="fas fa-bullseye" aria-hidden="true"></i>
+                            Referente Nacional
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 2 — Digitalización -->
+                <article class="obj-card obj-card--1 scroll-animate delay-1" aria-label="Digitalización de Procesos">
+                    <div class="obj-card__glow" aria-hidden="true"></div>
+                    <div class="obj-card__img" style="background-image:url('assets/img/audit.webp')" role="img" aria-label="Procesos digitales en la nube">
+                        <div class="obj-card__img-overlay"></div>
+                        <span class="obj-card__num" aria-hidden="true">02</span>
+                        <span class="obj-card__img-tag">Objetivo Específico 1</span>
+                    </div>
+                    <div class="obj-card__body">
+                        <h3 class="obj-card__title">Digitalización de Procesos</h3>
+                        <p class="obj-card__desc">Digitalizar los procesos contables mediante software en la nube, garantizando trazabilidad, eficiencia y acceso en tiempo real para la alta dirección.</p>
+                    </div>
+                    <div class="obj-card__footer">
+                        <span class="obj-card__kpi obj-card__kpi--teal">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                            <span class="obj-counter" data-target="90" data-suffix="%">0%</span>&nbsp;primer semestre
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 3 — Clientes -->
+                <article class="obj-card obj-card--2 scroll-animate delay-2" aria-label="Captación de Clientes Corporativos">
+                    <div class="obj-card__glow" aria-hidden="true"></div>
+                    <div class="obj-card__img" style="background-image:url('assets/img/about-meeting.webp')" role="img" aria-label="Reunión corporativa con clientes">
+                        <div class="obj-card__img-overlay"></div>
+                        <span class="obj-card__num" aria-hidden="true">03</span>
+                        <span class="obj-card__img-tag">Objetivo Específico 2</span>
+                    </div>
+                    <div class="obj-card__body">
+                        <h3 class="obj-card__title">Captación de Clientes Corporativos</h3>
+                        <p class="obj-card__desc">Atraer clientes corporativos de alto valor mediante propuestas personalizadas y un modelo de servicio especializado que supere los estándares del sector.</p>
+                    </div>
+                    <div class="obj-card__footer">
+                        <span class="obj-card__kpi">
+                            <i class="fas fa-building" aria-hidden="true"></i>
+                            <span class="obj-counter" data-target="20" data-suffix="">0</span>&nbsp;clientes · 1er año
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Card 4 — Satisfacción -->
+                <article class="obj-card obj-card--3 scroll-animate delay-3" aria-label="Excelencia en Satisfacción">
+                    <div class="obj-card__glow" aria-hidden="true"></div>
+                    <div class="obj-card__img" style="background-image:url('assets/img/building.webp')" role="img" aria-label="Edificio corporativo de excelencia">
+                        <div class="obj-card__img-overlay"></div>
+                        <span class="obj-card__num" aria-hidden="true">04</span>
+                        <span class="obj-card__img-tag">Objetivo Específico 3</span>
+                    </div>
+                    <div class="obj-card__body">
+                        <h3 class="obj-card__title">Excelencia en Satisfacción</h3>
+                        <p class="obj-card__desc">Mantener los más altos estándares de calidad y atención, consolidando relaciones de largo plazo basadas en confianza, resultados y acompañamiento estratégico.</p>
+                    </div>
+                    <div class="obj-card__footer">
+                        <span class="obj-card__kpi obj-card__kpi--teal">
+                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <span class="obj-counter" data-target="95" data-suffix="%">0%</span>&nbsp;satisfacción
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
     <!-- Footer -->
+
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col brand-col">
@@ -414,7 +537,6 @@
                         </span>
                     </span>
                 </a>
-                <p>Firma boutique especializada en consultoría financiera, auditoría y estrategias fiscales para la alta dirección.</p>
                 <ul class="footer-social" role="list" aria-label="Redes sociales de Alianzas Valderrama">
                     <li>
                         <a
