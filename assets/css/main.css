@@ -2349,6 +2349,15 @@ p {
     .experience-badge {
         right: 0;
         bottom: 0;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .experience-badge i {
+        font-size: 2rem;
+    }
+
+    .experience-badge span {
+        font-size: 0.82rem;
     }
 }
 
@@ -2421,6 +2430,30 @@ p {
     .form-row {
         flex-direction: column;
         gap: 0;
+    }
+
+    .experience-badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .experience-badge i {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .experience-badge span {
+        font-size: 0.8rem;
     }
 }
 
