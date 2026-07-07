@@ -1438,10 +1438,40 @@ p {
     color: white;
 }
 
+.cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+.cta-eyebrow::before,
+.cta-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--secondary);
+    opacity: 0.6;
+}
+
 .cta-parallax h2 {
     color: white;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+}
+
+.cta-highlight {
+    color: var(--secondary);
+    font-style: italic;
+    text-shadow: 0 0 24px rgba(201,162,39,0.45);
 }
 
 .cta-parallax p {
@@ -2006,6 +2036,74 @@ p {
     .whatsapp-float,
     .whatsapp-float:hover,
     .whatsapp-float:active {
+        transform: none;
+    }
+}
+
+/* ── Barra flotante redes sociales ───────────────────────── */
+.social-float {
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    z-index: 900;
+}
+
+.social-float__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(15, 25, 50, 0.75);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-decoration: none;
+    transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+.social-float__link:hover {
+    transform: scale(1.12) translateX(3px);
+    color: #fff;
+}
+
+.social-float__link--fb:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+    box-shadow: 0 6px 20px rgba(24,119,242,0.45);
+}
+
+.social-float__link--ig:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(220,39,67,0.45);
+}
+
+.social-float__link--tt:hover {
+    background: #010101;
+    border-color: #69c9d0;
+    box-shadow: 0 6px 20px rgba(105,201,208,0.35);
+}
+
+@media (max-width: 768px) {
+    .social-float {
+        left: 0.5rem;
+    }
+    .social-float__link {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-float__link:hover {
         transform: none;
     }
 }
