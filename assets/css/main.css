@@ -2043,7 +2043,7 @@ p {
 /* ── Barra flotante redes sociales ───────────────────────── */
 .social-float {
     position: fixed;
-    left: 1rem;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -2070,7 +2070,7 @@ p {
 }
 
 .social-float__link:hover {
-    transform: scale(1.12) translateX(3px);
+    transform: scale(1.12) translateX(-3px);
     color: #fff;
 }
 
@@ -2094,7 +2094,7 @@ p {
 
 @media (max-width: 768px) {
     .social-float {
-        left: 0.5rem;
+        right: 0.5rem;
     }
     .social-float__link {
         width: 36px;
