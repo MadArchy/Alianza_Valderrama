@@ -537,68 +537,6 @@
         </div>
     </section>
 
-    <!-- Testimonios -->
-    <section class="testimonios" id="testimonios">
-        <div class="container">
-            <div class="section-header scroll-animate">
-                <span class="section-subtitle">Clientes</span>
-                <h2>Lo Que Dicen Nuestros Aliados</h2>
-                <div class="heading-line center"></div>
-            </div>
-            <div class="testimonios-grid">
-
-                <article class="testimonio-card scroll-animate delay-1">
-                    <div class="testimonio-card__stars" aria-label="5 estrellas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonio-card__texto">
-                        "Llevan más de 10 años manejando la contabilidad de nuestra empresa. Su rigor técnico y discreción nos han dado una tranquilidad enorme frente a la DIAN. Los recomiendo sin dudarlo."
-                    </blockquote>
-                    <div class="testimonio-card__autor">
-                        <div class="testimonio-card__avatar" aria-hidden="true">JM</div>
-                        <div>
-                            <strong>Jorge Mora</strong>
-                            <span>Gerente General · Empresa del sector comercial</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonio-card scroll-animate delay-2">
-                    <div class="testimonio-card__stars" aria-label="5 estrellas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonio-card__texto">
-                        "Nos acompañaron en un proceso de fiscalización ante la DIAN que parecía imposible de resolver. Su conocimiento normativo y estrategia nos salvaron de una sanción millonaria."
-                    </blockquote>
-                    <div class="testimonio-card__autor">
-                        <div class="testimonio-card__avatar" aria-hidden="true">LP</div>
-                        <div>
-                            <strong>Laura Pedraza</strong>
-                            <span>Representante Legal · SAS de servicios</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="testimonio-card scroll-animate delay-3">
-                    <div class="testimonio-card__stars" aria-label="5 estrellas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonio-card__texto">
-                        "La implementación de NIIF que hicieron para nuestra compañía fue impecable. Presentamos los informes a Supersociedades sin ningún inconveniente. Profesionalismo de primer nivel."
-                    </blockquote>
-                    <div class="testimonio-card__autor">
-                        <div class="testimonio-card__avatar" aria-hidden="true">AR</div>
-                        <div>
-                            <strong>Andrés Ríos</strong>
-                            <span>Director Financiero · Empresa industrial</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Objetivos del Proyecto -->
     <section id="objetivos" class="objetivos">
 
@@ -704,48 +642,57 @@
 
 
 
-    <!-- Blog / Artículos SEO -->
+    <!-- Blog / Noticias en tiempo real -->
     <section class="blog-preview" id="blog">
         <div class="container">
             <div class="section-header scroll-animate">
                 <span class="section-subtitle">Actualidad Tributaria</span>
-                <h2>Artículos de Nuestros Expertos</h2>
+                <h2>Noticias del Sector en Colombia</h2>
                 <div class="heading-line center"></div>
-                <p class="blog-preview__intro">Conocimiento práctico sobre contabilidad, impuestos y normativa colombiana para que su empresa siempre esté un paso adelante.</p>
+                <p class="blog-preview__intro">Información actualizada sobre DIAN, impuestos, contabilidad y normativa colombiana. Noticias en tiempo real para que su empresa siempre esté un paso adelante.</p>
             </div>
-            <div class="blog-grid">
 
-                <article class="blog-card scroll-animate delay-1">
-                    <div class="blog-card__img" style="background-image:url('assets/img/audit.webp')" role="img" aria-label="Calendario DIAN"></div>
+            <!-- Estado de carga -->
+            <div class="blog-loading" id="blogLoading" aria-live="polite">
+                <div class="blog-skeleton"></div>
+                <div class="blog-skeleton"></div>
+                <div class="blog-skeleton"></div>
+            </div>
+
+            <!-- Contenedor dinámico de noticias -->
+            <div class="blog-grid" id="blogGrid" style="display:none;"></div>
+
+            <!-- Fallback si falla la API -->
+            <div class="blog-grid" id="blogFallback" style="display:none;">
+                <article class="blog-card">
+                    <div class="blog-card__img" style="background-image:url('assets/img/audit.webp')"></div>
                     <div class="blog-card__body">
                         <span class="blog-card__cat">DIAN · Tributario</span>
-                        <h3 class="blog-card__title">Fechas clave de vencimiento DIAN para 2026: calendario completo para empresas</h3>
-                        <p class="blog-card__desc">Conozca los plazos de declaración de renta, IVA, retención en la fuente y demás obligaciones tributarias para personas jurídicas y naturales en 2026.</p>
-                        <span class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></span>
+                        <h3 class="blog-card__title">Fechas clave de vencimiento DIAN 2026</h3>
+                        <p class="blog-card__desc">Conozca los plazos de declaración de renta, IVA y retención en la fuente para empresas en Colombia.</p>
+                        <a href="#contacto" class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="blog-card scroll-animate delay-2">
-                    <div class="blog-card__img" style="background-image:url('assets/img/consulting.webp')" role="img" aria-label="NIIF para PYMES"></div>
+                <article class="blog-card">
+                    <div class="blog-card__img" style="background-image:url('assets/img/consulting.webp')"></div>
                     <div class="blog-card__body">
                         <span class="blog-card__cat">NIIF · Contabilidad</span>
-                        <h3 class="blog-card__title">NIIF para PYMES en Colombia: errores más comunes y cómo evitarlos</h3>
-                        <p class="blog-card__desc">La adopción de Normas Internacionales de Información Financiera sigue siendo un reto para las pequeñas y medianas empresas. Estos son los puntos críticos a revisar.</p>
-                        <span class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></span>
+                        <h3 class="blog-card__title">NIIF para PYMES en Colombia: guía práctica</h3>
+                        <p class="blog-card__desc">Los puntos críticos de la adopción de Normas Internacionales de Información Financiera para pequeñas y medianas empresas.</p>
+                        <a href="#contacto" class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="blog-card scroll-animate delay-3">
-                    <div class="blog-card__img" style="background-image:url('assets/img/about-meeting.webp')" role="img" aria-label="Requerimientos DIAN"></div>
+                <article class="blog-card">
+                    <div class="blog-card__img" style="background-image:url('assets/img/about-meeting.webp')"></div>
                     <div class="blog-card__body">
                         <span class="blog-card__cat">DIAN · Sanciones</span>
-                        <h3 class="blog-card__title">¿Recibió un requerimiento de la DIAN? Pasos para responderlo sin cometer errores</h3>
-                        <p class="blog-card__desc">Los requerimientos ordinarios y especiales de la DIAN tienen plazos estrictos. Un error en la respuesta puede derivar en sanciones millonarias. Sepa cómo actuar.</p>
-                        <span class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></span>
+                        <h3 class="blog-card__title">¿Cómo responder un requerimiento de la DIAN?</h3>
+                        <p class="blog-card__desc">Los requerimientos tienen plazos estrictos. Un error puede derivar en sanciones millonarias. Conozca los pasos correctos.</p>
+                        <a href="#contacto" class="blog-card__cta">Solicitar asesoría <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
             </div>
+
         </div>
     </section>
 
@@ -904,6 +851,86 @@
             </svg>
         </a>
     </div>
+
+    <script>
+    // ── Noticias en tiempo real (Google News RSS via proxy) ──────────
+    (function() {
+        const QUERIES = [
+            'DIAN Colombia tributario',
+            'impuestos Colombia contabilidad',
+            'reforma tributaria Colombia'
+        ];
+        const IMGS = [
+            'assets/img/audit.webp',
+            'assets/img/consulting.webp',
+            'assets/img/about-meeting.webp',
+            'assets/img/building.webp',
+            'assets/img/payroll.webp',
+            'assets/img/portada01.webp'
+        ];
+        const CATS = [
+            'DIAN · Tributario', 'Contabilidad · Colombia',
+            'Impuestos · Normativa', 'NIIF · Finanzas',
+            'Tributario · Empresas', 'Actualidad · Fiscal'
+        ];
+
+        function stripHtml(html) {
+            return html ? html.replace(/<[^>]*>/g, '').replace(/&quot;/g,'\"').replace(/&amp;/g,'&').replace(/&#39;/g,"'").trim() : '';
+        }
+
+        function timeAgo(dateStr) {
+            const diff = (Date.now() - new Date(dateStr)) / 1000;
+            if (diff < 3600) return 'Hace ' + Math.floor(diff / 60) + ' min';
+            if (diff < 86400) return 'Hace ' + Math.floor(diff / 3600) + ' h';
+            return 'Hace ' + Math.floor(diff / 86400) + ' días';
+        }
+
+        function renderCards(items) {
+            const grid = document.getElementById('blogGrid');
+            grid.innerHTML = '';
+            items.slice(0, 6).forEach((item, i) => {
+                const title = stripHtml(item.title) || 'Noticia tributaria';
+                const desc  = stripHtml(item.description || item.content || '').substring(0, 130) + '…';
+                const link  = item.link || item.url || '#contacto';
+                const date  = item.pubDate ? timeAgo(item.pubDate) : '';
+                const img   = IMGS[i % IMGS.length];
+                const cat   = CATS[i % CATS.length];
+                grid.innerHTML += `
+                <article class="blog-card">
+                    <div class="blog-card__img" style="background-image:url('${img}')" role="img" aria-label="${cat}"></div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__cat">${cat}${date ? ' &nbsp;·&nbsp; ' + date : ''}</span>
+                        <h3 class="blog-card__title">${title}</h3>
+                        <p class="blog-card__desc">${desc}</p>
+                        <a href="${link}" target="_blank" rel="noopener noreferrer" class="blog-card__cta">
+                            Leer noticia <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>`;
+            });
+            document.getElementById('blogLoading').style.display = 'none';
+            grid.style.display = 'grid';
+        }
+
+        function showFallback() {
+            document.getElementById('blogLoading').style.display = 'none';
+            document.getElementById('blogFallback').style.display = 'grid';
+        }
+
+        const q = encodeURIComponent(QUERIES[Math.floor(Math.random() * QUERIES.length)] + ' site:dian.gov.co OR site:eltiempo.com OR site:portafolio.co OR site:larepublica.co');
+        const rssUrl = encodeURIComponent(`https://news.google.com/rss/search?q=${q}&hl=es-419&gl=CO&ceid=CO:es`);
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&count=6`;
+
+        fetch(apiUrl)
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === 'ok' && data.items && data.items.length > 0) {
+                    renderCards(data.items);
+                } else { showFallback(); }
+            })
+            .catch(() => showFallback());
+    })();
+    </script>
 
     <script>
     // Formulario de contacto → WhatsApp

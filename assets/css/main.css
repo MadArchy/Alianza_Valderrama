@@ -2054,6 +2054,32 @@ p {
     text-align: center;
 }
 
+/* Skeleton de carga */
+.blog-loading {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.blog-skeleton {
+    height: 360px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #e8ecf4 25%, #f4f6fb 50%, #e8ecf4 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shine 1.4s ease infinite;
+}
+
+@keyframes skeleton-shine {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+@media (max-width: 992px) {
+    .blog-loading { grid-template-columns: 1fr; }
+    .blog-skeleton { height: 200px; }
+}
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
