@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="es-CO">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Preconnect a dominios externos críticos -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.rss2json.com">
+
+    <!-- Preload de recursos críticos para LCP -->
+    <link rel="preload" href="assets/css/main.css?v=30" as="style">
+    <link rel="preload" href="assets/img/portada01.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/img/logo0.svg" as="image">
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,8 +22,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K2WS5J9Q');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Alianzas Valderrama — Firma contable y consultora tributaria en Dosquebradas, Bogotá y Cúcuta. Contabilidad integral, gestión ante la DIAN, NIIF, nómina y asesoría financiera para empresas en Colombia.">
     <meta name="keywords" content="contador Dosquebradas, contabilidad Risaralda, contador Bogotá, contador Cúcuta, consultoría tributaria Colombia, asesoría DIAN, NIIF Colombia, firma contable Colombia, Alianzas Valderrama, gestión tributaria empresas">
     <meta name="author" content="Alianzas Valderrama S.A.S.">
@@ -94,16 +106,63 @@
     }
     </script>
     
-    <!--
-    ══════════════════════════════════════════════════════════════
-    GOOGLE SEARCH CONSOLE — Verificación del sitio
-    1. Ve a https://search.google.com/search-console
-    2. Agrega la propiedad: https://alianzasvalderrama.com/
-    3. Elige verificación por "Etiqueta HTML"
-    4. Reemplaza el contenido del meta tag de abajo con tu código
-    ══════════════════════════════════════════════════════════════
-    -->
-    <!-- <meta name="google-site-verification" content="TU_CODIGO_AQUI"> -->
+    <!-- FAQ Schema — genera acordeón de preguntas en resultados de Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué servicios ofrece Alianzas Valderrama?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Alianzas Valderrama ofrece contabilidad integral, gestión tributaria ante la DIAN, consultoría financiera estratégica, presentación de informes a Supersociedades, implementación de NIIF, nómina y seguridad social, y atención de requerimientos tributarios para empresas en Colombia."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Dónde están ubicados?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tenemos sedes en Dosquebradas (Risaralda), Bogotá y Cúcuta. También atendemos empresas de todo Colombia de forma virtual. Contáctenos al +57 304 5810421 o en alianzasvalderrama@gmail.com."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánta experiencia tiene la firma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Alianzas Valderrama cuenta con más de 15 años de experiencia en contabilidad y consultoría tributaria en Colombia. Hemos asesorado a más de 250 empresas y contamos con clientes que llevan más de 14 años confiando en nuestra firma."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo puedo contactar a Alianzas Valderrama?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puede contactarnos por WhatsApp al +57 304 5810421, por correo a alianzasvalderrama@gmail.com, o completar el formulario en nuestra página web alianzasvalderrama.com. Respondemos en menos de 24 horas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Trabajan con NIIF para pequeñas y medianas empresas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, implementamos NIIF (Normas Internacionales de Información Financiera) para PYMES y grandes empresas en Colombia, incluyendo la preparación de informes para Supersociedades y otras entidades de control."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Pueden ayudar con requerimientos de la DIAN?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, atendemos requerimientos ordinarios y especiales de la DIAN, procesos de fiscalización, devoluciones y compensaciones de impuestos. Nuestro equipo tiene amplia experiencia en litigios tributarios y defensa fiscal."
+                }
+            }
+        ]
+    }
+    </script>
 
     <!--
     ══════════════════════════════════════════════════════════════
@@ -702,7 +761,7 @@
         <div class="container footer-content">
             <div class="footer-col brand-col">
                 <a href="#inicio" class="logo footer-logo" aria-label="Alianzas Valderrama — inicio">
-                    <img src="assets/img/logo0.svg" alt="Alianzas Valderrama" class="nav-logo-img footer-logo-img" width="440" height="414" decoding="async">
+                    <img src="assets/img/logo0.svg" alt="Alianzas Valderrama" class="nav-logo-img footer-logo-img" width="440" height="414" decoding="async" loading="lazy">
                     <span class="nav-brand-text footer-brand-text">
                         <span class="nav-brand-title">Alianzas<br>Valderrama</span>
                         <span class="nav-brand-tagline">
