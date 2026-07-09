@@ -2040,6 +2040,100 @@ p {
     }
 }
 
+/* ── Sección de Testimonios ──────────────────────────────── */
+.testimonios {
+    padding: 6rem 0;
+    background: linear-gradient(160deg, #f7f9fc 0%, #eef1f8 100%);
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonio-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem 1.75rem 1.75rem;
+    box-shadow: 0 4px 24px rgba(11,28,61,0.08);
+    border: 1px solid rgba(11,28,61,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(11,28,61,0.14);
+}
+
+.testimonio-card__stars {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+.testimonio-card__texto {
+    font-size: 0.95rem;
+    color: rgba(11,28,61,0.75);
+    line-height: 1.75;
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+}
+
+.testimonio-card__texto::before { content: '\201C'; }
+.testimonio-card__texto::after  { content: '\201D'; }
+
+.testimonio-card__autor {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    border-top: 1px solid rgba(11,28,61,0.07);
+    padding-top: 1rem;
+}
+
+.testimonio-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+}
+
+.testimonio-card__autor strong {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--primary);
+}
+
+.testimonio-card__autor span {
+    font-size: 0.78rem;
+    color: rgba(11,28,61,0.5);
+}
+
+@media (max-width: 992px) {
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonios {
+        padding: 4rem 0;
+    }
+}
+
 /* ── Barra flotante redes sociales ───────────────────────── */
 .social-float {
     position: fixed;
@@ -2105,6 +2199,107 @@ p {
 @media (prefers-reduced-motion: reduce) {
     .social-float__link:hover {
         transform: none;
+    }
+}
+
+/* ── Formulario de contacto ──────────────────────────────── */
+.contact-form-col {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(11,28,61,0.10);
+    border: 1px solid rgba(11,28,61,0.08);
+    width: 100%;
+}
+
+.contact-form__title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+}
+
+.contact-form__sub {
+    font-size: 0.88rem;
+    color: rgba(11,28,61,0.55);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.7rem 1rem;
+    border: 1.5px solid rgba(11,28,61,0.15);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: var(--primary);
+    background: #fafbfd;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--font-body);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(201,162,39,0.12);
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contact-form__btn {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 0.9rem;
+}
+
+.contact-form__btn i {
+    font-size: 1.2rem;
+}
+
+.contact-form__privacy {
+    font-size: 0.75rem;
+    color: rgba(11,28,61,0.45);
+    text-align: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+.contact-form__privacy a {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1.75rem 1.25rem;
     }
 }
 

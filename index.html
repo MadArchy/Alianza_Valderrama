@@ -167,6 +167,7 @@
                 src="assets/video/video1.mp4"
                 muted
                 autoplay
+                loop
                 playsinline
                 preload="metadata"
                 poster="assets/img/portada01.webp"
@@ -477,7 +478,7 @@
                         <i class="fas fa-phone-alt"></i>
                         <div>
                             <h4>Línea Directa</h4>
-                            <p>+57 304 5810421</p>
+                            <p><a href="tel:+573045810421">+57 304 5810421</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -488,6 +489,111 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="contact-form-col scroll-animate delay-2">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <h3 class="contact-form__title">Solicitar Asesoría</h3>
+                    <p class="contact-form__sub">Diligencia el formulario y le respondemos en menos de 24 horas.</p>
+                    <div class="form-group">
+                        <label for="cf-name">Nombre completo *</label>
+                        <input type="text" id="cf-name" name="nombre" placeholder="Ej: Carlos Rodríguez" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-empresa">Empresa / Razón social</label>
+                        <input type="text" id="cf-empresa" name="empresa" placeholder="Ej: Mi Empresa S.A.S." autocomplete="organization">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-phone">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="cf-phone" name="telefono" placeholder="Ej: 304 5810421" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-servicio">Servicio de interés</label>
+                            <select id="cf-servicio" name="servicio">
+                                <option value="">Seleccionar...</option>
+                                <option>Contabilidad Integral</option>
+                                <option>Gestión Tributaria / DIAN</option>
+                                <option>Consultoría Financiera</option>
+                                <option>Nómina y Seguridad Social</option>
+                                <option>NIIF</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-msg">Mensaje *</label>
+                        <textarea id="cf-msg" name="mensaje" rows="4" placeholder="Cuéntenos brevemente la necesidad de su empresa..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary contact-form__btn">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        Enviar por WhatsApp
+                    </button>
+                    <p class="contact-form__privacy">Al enviar acepta nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <span class="section-subtitle">Clientes</span>
+                <h2>Lo Que Dicen Nuestros Aliados</h2>
+                <div class="heading-line center"></div>
+            </div>
+            <div class="testimonios-grid">
+
+                <article class="testimonio-card scroll-animate delay-1">
+                    <div class="testimonio-card__stars" aria-label="5 estrellas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonio-card__texto">
+                        "Llevan más de 10 años manejando la contabilidad de nuestra empresa. Su rigor técnico y discreción nos han dado una tranquilidad enorme frente a la DIAN. Los recomiendo sin dudarlo."
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <div class="testimonio-card__avatar" aria-hidden="true">JM</div>
+                        <div>
+                            <strong>Jorge Mora</strong>
+                            <span>Gerente General · Empresa del sector comercial</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonio-card scroll-animate delay-2">
+                    <div class="testimonio-card__stars" aria-label="5 estrellas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonio-card__texto">
+                        "Nos acompañaron en un proceso de fiscalización ante la DIAN que parecía imposible de resolver. Su conocimiento normativo y estrategia nos salvaron de una sanción millonaria."
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <div class="testimonio-card__avatar" aria-hidden="true">LP</div>
+                        <div>
+                            <strong>Laura Pedraza</strong>
+                            <span>Representante Legal · SAS de servicios</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonio-card scroll-animate delay-3">
+                    <div class="testimonio-card__stars" aria-label="5 estrellas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonio-card__texto">
+                        "La implementación de NIIF que hicieron para nuestra compañía fue impecable. Presentamos los informes a Supersociedades sin ningún inconveniente. Profesionalismo de primer nivel."
+                    </blockquote>
+                    <div class="testimonio-card__autor">
+                        <div class="testimonio-card__avatar" aria-hidden="true">AR</div>
+                        <div>
+                            <strong>Andrés Ríos</strong>
+                            <span>Director Financiero · Empresa industrial</span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -752,6 +858,33 @@
             </svg>
         </a>
     </div>
+
+    <script>
+    // Formulario de contacto → WhatsApp
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre   = document.getElementById('cf-name').value.trim();
+        const empresa  = document.getElementById('cf-empresa').value.trim();
+        const telefono = document.getElementById('cf-phone').value.trim();
+        const servicio = document.getElementById('cf-servicio').value;
+        const mensaje  = document.getElementById('cf-msg').value.trim();
+
+        if (!nombre || !telefono || !mensaje) {
+            alert('Por favor complete los campos obligatorios (*).');
+            return;
+        }
+
+        let texto = `*Solicitud de Asesoría — Alianzas Valderrama*\n\n`;
+        texto += `👤 *Nombre:* ${nombre}\n`;
+        if (empresa) texto += `🏢 *Empresa:* ${empresa}\n`;
+        texto += `📞 *Teléfono:* ${telefono}\n`;
+        if (servicio) texto += `📋 *Servicio:* ${servicio}\n`;
+        texto += `\n💬 *Mensaje:*\n${mensaje}`;
+
+        const url = `https://wa.me/573045810421?text=${encodeURIComponent(texto)}`;
+        window.open(url, '_blank');
+    });
+    </script>
 
 </body>
 </html>
